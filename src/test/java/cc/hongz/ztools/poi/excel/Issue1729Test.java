@@ -1,0 +1,34 @@
+package cc.hongz.ztools.poi.excel;
+
+import lombok.Data;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+/**
+ * issue#1729@Github<br>
+ * 日期为空时返回""而非null，因此会导致日期等字段的转换错误，此处转bean时忽略错误。
+ */
+@DisplayName("issue#1729：日期为空时转 Bean 忽略转换错误")
+public class Issue1729Test {
+
+    @Test
+    @DisplayName("读取 Excel 转 Bean 校验空日期字段返回 null")
+    public void readTest() {
+        final ExcelReader reader = ExcelUtil.getReader("UserProjectDO.xlsx");
+        final List<UserProjectDO> read = reader.read(0, 1, UserProjectDO.class);
+        assertEquals("aa", read.get(0).getProjectName());
+        assertNull(read.get(0).getEndTrainTime());
+        assertEquals("2020-02-02", read.get(0).getEndTestTime().toString());
+    }
+
+    @Data
+    public static class UserProjectDO {
+        private String projectName;
+        private java.sql.Date endTrainTime;
+        private java.sql.Date endTestTime;
+    }
+}

@@ -1,0 +1,29 @@
+package cc.hongz.ztools.poi.excel.cell.setters;
+
+import cc.hongz.ztools.poi.excel.cell.CellSetter;
+import org.apache.poi.ss.usermodel.Cell;
+
+/**
+ * {@link CharSequence} 值单元格设置器。
+ *
+ * @author looly
+ * @since 5.7.8
+ */
+public class CharSequenceCellSetter implements CellSetter {
+
+    private final CharSequence value;
+
+    /**
+     * 构造。
+     *
+     * @param value 值
+     */
+    CharSequenceCellSetter(final CharSequence value) {
+        this.value = value;
+    }
+
+    @Override
+    public void setValue(final Cell cell) {
+        cell.setCellValue(value.toString());
+    }
+}

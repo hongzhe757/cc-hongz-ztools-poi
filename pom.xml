@@ -15,7 +15,7 @@
 
 	<artifactId>cc-hongz-ztools-poi</artifactId>
 	<name>${project.artifactId}</name>
-	<description>POI工具类模块（对齐 hutool-poi，Office文档/OFD操作）</description>
+	<description>POI工具类模块（Office文档/OFD操作）</description>
 
 	<properties>
 		<Automatic-Module-Name>cc.hongz.ztools.poi</Automatic-Module-Name>

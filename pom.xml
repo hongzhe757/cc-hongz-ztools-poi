@@ -24,11 +24,13 @@
 	</properties>
 
 	<dependencies>
+		<!-- ztools 核心工具类库 -->
 		<dependency>
 			<groupId>cc.hongz</groupId>
 			<artifactId>cc-hongz-ztools-core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<!-- ztools 日志门面 -->
 		<dependency>
 			<groupId>cc.hongz</groupId>
 			<artifactId>cc-hongz-ztools-log</artifactId>
@@ -51,11 +53,13 @@
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>
+			<!-- JUnit5 测试框架 -->
 			<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Lombok 测试去样板 -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

@@ -20,8 +20,7 @@
 	<properties>
 		<Automatic-Module-Name>cc.hongz.ztools.poi</Automatic-Module-Name>
 
-		<!-- versions -->
-		<poi.version>4.1.2</poi.version>
+
 	</properties>
 
 	<dependencies>
@@ -55,13 +54,11 @@
 			<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.10.3</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.34</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
